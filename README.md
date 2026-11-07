@@ -24,7 +24,7 @@ Results so far: [results/RESULTS.md](results/RESULTS.md).
 1. Click **Open in Colab** above.
 2. *Runtime → Change runtime type → T4 GPU*.
 3. Run the cells from top to bottom. Each cell is one step and explains what it does. The full AMI pipeline takes
-   about 3–4 hours on a free T4.
+   about 2–3 hours on a free T4.
 
 ### Option B: your own Linux machine with an NVIDIA GPU
 ```bash
