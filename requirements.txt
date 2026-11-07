@@ -1,0 +1,10 @@
+# Main environment: features, SA-EEND training/inference, ONNX export, scoring, tests.
+# On Colab, torch is already installed; `pip install -r requirements.txt` adds the rest.
+numpy>=1.24
+scipy>=1.10
+soundfile>=0.12
+torch>=2.5          # torch.onnx.export(..., dynamo=False) needs 2.5 or newer
+onnx>=1.15
+onnxruntime>=1.17
+matplotlib>=3.7
+pytest>=7

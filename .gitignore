@@ -1,0 +1,17 @@
+# data, models and outputs of a run (see steps/config.sh)
+work/
+data/
+exp/
+*.wav
+*.flac
+*.npz
+*.pt
+*.onnx
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+# secrets
+.hf_token
+.env

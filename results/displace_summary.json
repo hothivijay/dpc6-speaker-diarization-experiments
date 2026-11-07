@@ -1,0 +1,250 @@
+{
+ "dataset": "DISPLACE-2024 Track-1 speaker diarization, eval set, 32 sessions",
+ "note": "Scores only. DISPLACE audio and references are licensed and are not distributed. Produced by src/displace_rescore.py.",
+ "speech_h": 16.33,
+ "reference_speaker_h": 19.45,
+ "one_speaker_per_frame_floor_P1_pct": 16.04,
+ "protocols": {
+  "P1": {
+   "sortformer": {
+    "der": 26.87,
+    "miss": 11.95,
+    "fa": 6.75,
+    "conf": 8.17,
+    "ci": [
+     21.78,
+     33.09
+    ],
+    "median": 21.05,
+    "worst": "M035",
+    "worst_der": 84.32,
+    "best_der": 8.87,
+    "n": 32
+   },
+   "pyannote": {
+    "der": 34.75,
+    "miss": 10.7,
+    "fa": 8.51,
+    "conf": 15.53,
+    "ci": [
+     29.24,
+     40.76
+    ],
+    "median": 32.04,
+    "worst": "M035",
+    "worst_der": 79.33,
+    "best_der": 4.57,
+    "n": 32,
+    "vs_sortformer": {
+     "delta": 7.87,
+     "ci": [
+      4.16,
+      11.32
+     ],
+     "p": 0.000398,
+     "better": 7,
+     "tied": 0,
+     "worse": 25
+    }
+   },
+   "nemo_clus": {
+    "der": 68.34,
+    "miss": 61.46,
+    "fa": 1.91,
+    "conf": 4.97,
+    "ci": [
+     59.93,
+     76.08
+    ],
+    "median": 61.95,
+    "worst": "B039",
+    "worst_der": 96.59,
+    "best_der": 35.01,
+    "n": 32,
+    "vs_sortformer": {
+     "delta": 41.47,
+     "ci": [
+      31.07,
+      51.0
+     ],
+     "p": 2.33e-09,
+     "better": 1,
+     "tied": 0,
+     "worse": 31
+    }
+   },
+   "nemo_clus_oraclevad": {
+    "der": 23.29,
+    "miss": 16.04,
+    "fa": 0.0,
+    "conf": 7.25,
+    "ci": [
+     18.87,
+     28.09
+    ],
+    "median": 20.34,
+    "worst": "M035",
+    "worst_der": 64.78,
+    "best_der": 1.13,
+    "n": 32,
+    "vs_sortformer": {
+     "delta": -3.58,
+     "ci": [
+      -7.27,
+      -0.2
+     ],
+     "p": 0.0253,
+     "better": 21,
+     "tied": 0,
+     "worse": 11
+    },
+    "vs_nemo_clus": {
+     "delta": -45.05,
+     "ci": [
+      -53.54,
+      -35.79
+     ],
+     "p": 4.66e-10,
+     "better": 32,
+     "tied": 0,
+     "worse": 0
+    }
+   },
+   "sel_oracle": {
+    "der": 25.49,
+    "miss": 11.33,
+    "fa": 6.91,
+    "conf": 7.24,
+    "ci": [
+     20.65,
+     31.33
+    ],
+    "median": 20.85,
+    "worst": "M035",
+    "worst_der": 79.33,
+    "best_der": 4.57,
+    "n": 32
+   },
+   "dover": {
+    "der": 32.41,
+    "miss": 16.8,
+    "fa": 4.29,
+    "conf": 11.31,
+    "ci": [
+     27.38,
+     37.95
+    ],
+    "median": 28.18,
+    "worst": "M035",
+    "worst_der": 76.69,
+    "best_der": 10.36,
+    "n": 32
+   }
+  },
+  "P2": {
+   "sortformer": {
+    "der": 15.32,
+    "miss": 3.68,
+    "fa": 3.69,
+    "conf": 7.95,
+    "ci": [
+     10.14,
+     21.96
+    ],
+    "median": 9.37,
+    "worst": "M035",
+    "worst_der": 87.95,
+    "best_der": 3.47,
+    "n": 32
+   },
+   "pyannote": {
+    "der": 20.46,
+    "miss": 2.11,
+    "fa": 5.45,
+    "conf": 12.9,
+    "ci": [
+     14.17,
+     27.93
+    ],
+    "median": 12.44,
+    "worst": "M035",
+    "worst_der": 80.85,
+    "best_der": 2.01,
+    "n": 32
+   },
+   "nemo_clus": {
+    "der": 59.17,
+    "miss": 53.71,
+    "fa": 0.72,
+    "conf": 4.74,
+    "ci": [
+     48.57,
+     68.8
+    ],
+    "median": 48.02,
+    "worst": "B054",
+    "worst_der": 94.21,
+    "best_der": 15.6,
+    "n": 32
+   },
+   "nemo_clus_oraclevad": {
+    "der": 5.59,
+    "miss": 0.0,
+    "fa": 0.0,
+    "conf": 5.59,
+    "ci": [
+     1.96,
+     10.61
+    ],
+    "median": 2.16,
+    "worst": "M035",
+    "worst_der": 63.56,
+    "best_der": 0.14,
+    "n": 32,
+    "vs_nemo_clus": {
+     "delta": -53.58,
+     "ci": [
+      -63.77,
+      -42.09
+     ],
+     "p": 4.66e-10,
+     "better": 32,
+     "tied": 0,
+     "worse": 0
+    }
+   }
+  },
+  "C25": {
+   "sortformer": {
+    "der": 17.85,
+    "miss": 6.95,
+    "fa": 3.18,
+    "conf": 7.73,
+    "ci": [
+     12.59,
+     24.36
+    ],
+    "median": 11.89,
+    "worst": "M035",
+    "worst_der": 81.11,
+    "best_der": 4.3,
+    "n": 32
+   },
+   "nemo_clus_oraclevad": {
+    "der": 14.23,
+    "miss": 8.95,
+    "fa": 0.0,
+    "conf": 5.28,
+    "ci": [
+     9.94,
+     19.46
+    ],
+    "median": 10.74,
+    "worst": "M035",
+    "worst_der": 63.89,
+    "best_der": 0.24,
+    "n": 32
+   }
+  }
+ }
+}

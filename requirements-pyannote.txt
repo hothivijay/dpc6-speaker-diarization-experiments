@@ -1,0 +1,10 @@
+# Separate environment for the pyannote 3.1 baseline (step 05), pinned to the versions used for the results.
+# Python 3.10-3.12. Create it apart from the main environment, e.g.
+#   python3 -m venv pyenv && pyenv/bin/pip install -r requirements-pyannote.txt
+#   export PYANNOTE_PY=$PWD/pyenv/bin/python
+pyannote.audio==3.3.2
+torch==2.5.1
+torchaudio==2.5.1
+numpy<2
+huggingface_hub==0.24.7
+soundfile
