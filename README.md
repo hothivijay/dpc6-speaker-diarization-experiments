@@ -17,7 +17,7 @@ commented line by line.
 Headline results ([results/RESULTS.md](results/RESULTS.md)):
 
 * **DISPLACE-2024 official eval (32 sessions, P1):** Streaming Sortformer v2 26.87% [21.78, 33.09], pyannote 3.1 34.75%, NeMo clustering 68.34%; with reference speech regions NeMo clustering drops to 23.29% (−45.05 points, 32/32 sessions). Overlap alone puts a 16.04% floor under any one-speaker-per-frame system.
-* **AMI Eval (12 meetings, headset mix, P1):** pyannote 3.1 19.64%, SA-EEND re-implementation 51.11% [48.79, 53.49] (41 epochs, 23 min on a T4). pyannote on all 16 test meetings: 18.78% against the published 18.8% (reproduction check).
+* **AMI Eval (12 meetings, headset mix, P1):** pyannote 3.1 19.64%, SA-EEND re-implementation 47.32% [43.23, 51.31] (135 epochs, 48 min on a T4). pyannote on all 16 test meetings: 18.78% against the published 18.8% (reproduction check).
 
 ---
 

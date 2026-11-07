@@ -31,12 +31,12 @@ Main findings:
 
 ## AMI Mix-Headset, BUT only_words references
 
-SA-EEND (3.25 M parameters) was trained on the 136 train meetings for 41 epochs in 23 min on a Colab T4 (stopped there to fit the review schedule). The lowest dev loss came at epoch 40. Settings chosen on Dev (14 meetings) and frozen: `avg.pt`, window 3000 frames (300 s), threshold 0.4, median 11 frames (Dev P1 53.82%).
+SA-EEND (3.25 M parameters) was trained on the 136 train meetings for 135 epochs in 48 min on a Colab T4 (stopped there to fit the review schedule). The lowest dev loss came at epoch 110. Settings chosen on Dev (14 meetings) and frozen: `avg.pt`, window whole recording, threshold 0.4, median 11 frames (Dev P1 49.42%).
 
 | System | Eval-12 P1 % [95% CI] | Miss | FA | Conf | Eval-12 P2 % | Eval-16 P1 % [95% CI] |
 |---|---|---|---|---|---|---|
-| SA-EEND (ours, re-implemented) | 51.11 [48.79, 53.49] | 19.07 | 8.54 | 23.50 | 45.50 | 51.98 [49.79, 54.22] |
+| SA-EEND (ours, re-implemented) | 47.32 [43.23, 51.31] | 23.66 | 7.49 | 16.17 | 40.54 | 47.18 [43.19, 50.90] |
 | pyannote 3.1 (zero-shot) | 19.64 [15.99, 23.01] | 9.77 | 3.32 | 6.55 | 5.97 | 18.78 [15.68, 21.68] |
 
 Reproduction check: the published pyannote 3.1 value for this setting (all 16 meetings, no collar, overlap scored) is 18.8% (miss 9.5, FA 3.6, confusion 5.7). Ours: 18.78% (miss 9.52, FA 3.58, confusion 5.68).
-SA-EEND − pyannote on Eval-12 (P1): +31.46 points [27.80, 35.70], SA-EEND better on 0 of 12 meetings, Wilcoxon p = 0.00049.
+SA-EEND − pyannote on Eval-12 (P1): +27.67 points [24.22, 32.13], SA-EEND better on 0 of 12 meetings, Wilcoxon p = 0.00049.
