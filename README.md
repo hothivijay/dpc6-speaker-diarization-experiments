@@ -14,7 +14,10 @@ commented line by line.
 | **pyannote 3.1 on AMI** | Reproduction check against the published 18.8% | `src/run_pyannote.py` |
 | **Edge deployment** | Speed, memory and DER change of an INT8 model on a CPU / Raspberry Pi 5 | `src/bench_edge.py` |
 
-Results so far: [results/RESULTS.md](results/RESULTS.md).
+Headline results ([results/RESULTS.md](results/RESULTS.md)):
+
+* **DISPLACE-2024 official eval (32 sessions, P1):** Streaming Sortformer v2 26.87% [21.78, 33.09], pyannote 3.1 34.75%, NeMo clustering 68.34%; with reference speech regions NeMo clustering drops to 23.29% (−45.05 points, 32/32 sessions). Overlap alone puts a 16.04% floor under any one-speaker-per-frame system.
+* **AMI Eval (12 meetings, headset mix, P1):** pyannote 3.1 19.64%, SA-EEND re-implementation 51.11% [48.79, 53.49] (41 epochs, 23 min on a T4). pyannote on all 16 test meetings: 18.78% against the published 18.8% (reproduction check).
 
 ---
 

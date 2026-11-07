@@ -29,8 +29,14 @@ Main findings:
 * pyannote − Sortformer: +7.87 points [4.16, 11.32], with pyannote worse on 25 of 32 sessions (p = 4.0e-4).
   Choosing the best system per session afterwards (oracle selection) gives 25.49%, and DOVER-Lap fusion gives 32.41%.
 
-## AMI Mix-Headset (BUT only_words references)
+## AMI Mix-Headset, BUT only_words references
 
-SA-EEND training, Dev-frozen decoding, the pyannote 3.1 reproduction and the ONNX FP32/INT8 CPU benchmark
-are run by steps 01–07 and land in `WORK/results/summary.json`. The numbers of the reference run are added here
-when that run finishes.
+SA-EEND (3.25 M parameters) was trained on the 136 train meetings for 41 epochs in 23 min on a Colab T4 (stopped there to fit the review schedule). The lowest dev loss came at epoch 40. Settings chosen on Dev (14 meetings) and frozen: `avg.pt`, window 3000 frames (300 s), threshold 0.4, median 11 frames (Dev P1 53.82%).
+
+| System | Eval-12 P1 % [95% CI] | Miss | FA | Conf | Eval-12 P2 % | Eval-16 P1 % [95% CI] |
+|---|---|---|---|---|---|---|
+| SA-EEND (ours, re-implemented) | 51.11 [48.79, 53.49] | 19.07 | 8.54 | 23.50 | 45.50 | 51.98 [49.79, 54.22] |
+| pyannote 3.1 (zero-shot) | 19.64 [15.99, 23.01] | 9.77 | 3.32 | 6.55 | 5.97 | 18.78 [15.68, 21.68] |
+
+Reproduction check: the published pyannote 3.1 value for this setting (all 16 meetings, no collar, overlap scored) is 18.8% (miss 9.5, FA 3.6, confusion 5.7). Ours: 18.78% (miss 9.52, FA 3.58, confusion 5.68).
+SA-EEND − pyannote on Eval-12 (P1): +31.46 points [27.80, 35.70], SA-EEND better on 0 of 12 meetings, Wilcoxon p = 0.00049.
