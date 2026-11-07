@@ -54,7 +54,7 @@ selection). Finished steps are skipped, so after a disconnect you just start aga
 | 00 | `00_check_env.sh` | prints package versions, GPU and free disk | – | seconds |
 | 01 | `01_download_ami.sh` | AMI headset-mix audio (170 meetings, ~10 GB) + BUT `only_words` references | `data/ami/` | 30–60 min |
 | 02 | `02_extract_features.sh` | 23 log-Mel, ±7 context, ×10 subsampling → 345-dim per 100 ms; 4-speaker targets | `data/ami_feats/` | 10–20 min |
-| 03 | `03_train_sa_eend.sh` | trains SA-EEND (4 blocks, 256 units, PIT-BCE, Noam) within a time budget (`MAXMIN`, default 75) | `exp/sa_eend_train/` | 75 min |
+| 03 | `03_train_sa_eend.sh` | trains SA-EEND (4 blocks, 256 units, PIT-BCE, Noam) within a time budget (`MAXMIN`, default 40) | `exp/sa_eend_train/` | 40 min |
 | 04 | `04_evaluate_sa_eend.sh` | chooses model average, window, threshold, median **on Dev**, freezes them, decodes Eval | `exp/ami_sys/sa_eend/` | 5–15 min |
 | 05 | `05_pyannote_ami.sh` | pyannote 3.1 on AMI test (needs `HF_TOKEN`) | `exp/ami_sys/pyannote/` | 10–20 min |
 | 06 | `06_score_ami.sh` | DER under P1/P2/C25 on 12 and 16 test meetings, CIs, paired test | `results/ami_systems.json` | 1 min |

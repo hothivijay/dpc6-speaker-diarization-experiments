@@ -19,7 +19,7 @@ PYANNOTE_PY=${PYANNOTE_PY:-$PY}     # environment with pyannote.audio 3.3.2 (req
 
 # ---- SA-EEND training (values used for the reported run)
 EPOCHS=${EPOCHS:-150}               # upper limit on epochs
-MAXMIN=${MAXMIN:-75}                # time budget in minutes (training stops after the epoch that passes it)
+MAXMIN=${MAXMIN:-40}                # time budget in minutes (training stops after the epoch that passes it)
 BATCH=${BATCH:-32}
 CHUNK=${CHUNK:-500}                 # 500 frames x 100 ms = 50 s training chunks
 WARMUP=${WARMUP:-4000}              # Noam warm-up steps
